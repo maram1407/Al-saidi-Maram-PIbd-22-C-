@@ -8,7 +8,7 @@ namespace AbstractFactory
 {
     static class Program
     {
-        /// <summary>
+        /// <summary> 
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
