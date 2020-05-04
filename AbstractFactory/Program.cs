@@ -9,7 +9,6 @@ using Unity.Lifetime;
 
 namespace AbstractFactory
 {
-
     static class Program
     {
         /// <summary>
