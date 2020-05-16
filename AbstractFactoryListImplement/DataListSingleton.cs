@@ -21,9 +21,10 @@ namespace AbstractFactoryListImplement
 
         private DataListSingleton()
         {
-
-
-            Components = new List<Component>(); Orders = new List<Order>(); Products = new List<Product>(); ProductComponents = new List<ProductComponent>();
+        Components = new List<Component>(); 
+        Orders = new List<Order>(); 
+        Products = new List<Product>(); 
+        ProductComponents = new List<ProductComponent>();
         }
 
         public static DataListSingleton GetInstance()
