@@ -1,15 +1,19 @@
-﻿using AbstractFactoryBusinessLogic.BusinessLogics;
+﻿
+using AbstractFactoryBusinessLogic.BusinessLogics;
 using AbstractFactoryBusinessLogic.Interfaces;
-using AbstractFactoryListImplement.Implements;
+using AbstractFactoryFileImplement.Implements;
 using System;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Unity;
 using Unity.Lifetime;
 
-
-namespace AbstractFactory
+namespace AbstractFactory 
 {
-    static class Program
+
+    public static class Program
     {
         /// <summary>
         /// Главная точка входа для приложения.
@@ -36,5 +40,6 @@ namespace AbstractFactory
                 return currentContainer;
             }
         }
+
     }
 }
