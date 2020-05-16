@@ -194,7 +194,6 @@
             // 
             this.Column3.HeaderText = "Количество";
             this.Column3.Name = "Column3";
-            // this.Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView.AllowUserToAddRows = false;
             // 
             // FormProductConcrete
