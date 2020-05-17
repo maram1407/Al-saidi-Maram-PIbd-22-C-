@@ -15,7 +15,7 @@ namespace AbstractFactoryListImplement.Implements
         {
             source = DataListSingleton.GetInstance();
         }
-        public void CreateOrUpdate(ProductBindingModel model)
+        public void CreateOrUpdate(ProductConcreteBindingModel model)
         {
             Product tempProduct = model.Id.HasValue ? null : new Product { Id = 1 };
             foreach (var product in source.Products)
@@ -46,7 +46,7 @@ namespace AbstractFactoryListImplement.Implements
                 source.Products.Add(CreateModel(model, tempProduct));
             }
         }
-        public void Delete(ProductBindingModel model)
+        public void Delete(ProductConcreteBindingModel model)
         {
             // удаляем записи по компонентам при удалении изделия
             for (int i = 0; i < source.ProductComponents.Count; ++i)
@@ -66,7 +66,7 @@ namespace AbstractFactoryListImplement.Implements
             }
             throw new Exception("Элемент не найден");
         }
-        private Product CreateModel(ProductBindingModel model, Product product)
+        private Product CreateModel(ProductConcreteBindingModel model, Product product)
         {
             product.ProductName = model.ProductName;
             product.Price = model.Price;
@@ -111,7 +111,7 @@ namespace AbstractFactoryListImplement.Implements
             }
             return product;
         }
-        public List<ProductViewModel> Read(ProductBindingModel model)
+        public List<ProductViewModel> Read(ProductConcreteBindingModel model)
         {
             List<ProductViewModel> result = new List<ProductViewModel>();
             foreach (var component in source.Products)

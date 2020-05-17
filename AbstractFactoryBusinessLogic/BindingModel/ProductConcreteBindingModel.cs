@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AbstractFactoryBusinessLogic.BindingModel
 {
-  public  class ProductBindingModel
+  public  class ProductConcreteBindingModel 
     {
         public int? Id { get; set; }
         public string ProductName { get; set; }

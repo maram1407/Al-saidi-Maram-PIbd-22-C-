@@ -49,7 +49,7 @@ namespace AbstractFactory
                 try
                 {
                     int id = Convert.ToInt32(comboBoxProduct.SelectedValue);
-                    ProductViewModel product = logicP.Read(new ProductBindingModel
+                    ProductViewModel product = logicP.Read(new ProductConcreteBindingModel
                     {
                         Id =
                     id

@@ -16,7 +16,7 @@ namespace AbstractFactoryFileImplement.Implements
         {
             source = FileDataListSingleton.GetInstance();
         }
-        public void CreateOrUpdate(ProductBindingModel model)
+        public void CreateOrUpdate(ProductConcreteBindingModel model)
         {
             Product element = source.Products.FirstOrDefault(rec => rec.ProductName ==
            model.ProductName && rec.Id != model.Id);
@@ -67,7 +67,7 @@ namespace AbstractFactoryFileImplement.Implements
                 });
             }
         }
-        public void Delete(ProductBindingModel model)
+        public void Delete(ProductConcreteBindingModel model)
         {
             // удаяем записи по компонентам при удалении изделия
             source.ProductComponents.RemoveAll(rec => rec.ProductId == model.Id);
@@ -81,7 +81,7 @@ namespace AbstractFactoryFileImplement.Implements
                 throw new Exception("Элемент не найден");
             }
         }
-        public List<ProductViewModel> Read(ProductBindingModel model)
+        public List<ProductViewModel> Read(ProductConcreteBindingModel model)
         {
             return source.Products
             .Where(rec => model == null || rec.Id == model.Id)
