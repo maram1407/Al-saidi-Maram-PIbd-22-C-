@@ -127,6 +127,10 @@
       <Project>{a0e92b3a-c1c2-4ec1-b370-aa18b58a1ab2}</Project>
       <Name>AbstractFactoryBusinessLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AbstractFactoryFileImplement\AbstractFactoryFileImplement.csproj">
+      <Project>{495c95d1-02be-4fa0-9434-7bdc7c3983d9}</Project>
+      <Name>AbstractFactoryFileImplement</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AbstractFactoryListImplement\AbstractFactoryListImplement.csproj">
       <Project>{e5e4fa79-5835-4cd3-ad1c-023ea92d30e8}</Project>
       <Name>AbstractFactoryListImplement</Name>
