@@ -28,7 +28,7 @@ namespace AbstractFactory
             {
                 try
                 {
-                    ProductViewModel view = logic.Read(new ProductBindingModel
+                    ProductViewModel view = logic.Read(new ProductConcreteBindingModel
                     {
                         Id = id.Value
                     })?[0];
@@ -92,7 +92,7 @@ namespace AbstractFactory
             }
             try
             {
-                logic.CreateOrUpdate(new ProductBindingModel
+                logic.CreateOrUpdate(new ProductConcreteBindingModel
                 {
                     Id = id,
                     ProductName = textBoxName.Text,

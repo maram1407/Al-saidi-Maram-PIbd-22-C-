@@ -78,7 +78,7 @@ DataGridViewAutoSizeColumnMode.Fill;
                     int id = Convert.ToInt32(dataGridView.SelectedRows[0].Cells[0].Value);
                     try
                     {
-                        logic.Delete(new ProductBindingModel { Id = id });
+                        logic.Delete(new ProductConcreteBindingModel { Id = id });
                     }
                     catch (Exception ex)
                     {

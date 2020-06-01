@@ -8,8 +8,8 @@ namespace AbstractFactoryBusinessLogic.Interfaces
 {
     public interface IProductLogic
     {
-        List<ProductViewModel> Read(ProductBindingModel model);
-        void CreateOrUpdate(ProductBindingModel model);
-        void Delete(ProductBindingModel model);
+        List<ProductViewModel> Read(ProductConcreteBindingModel model);
+        void CreateOrUpdate(ProductConcreteBindingModel model);
+        void Delete(ProductConcreteBindingModel model);
     }
 }
