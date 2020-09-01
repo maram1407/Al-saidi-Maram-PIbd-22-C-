@@ -138,5 +138,11 @@ namespace AbstractFactory
         {
             work.DoWork();
         }
+
+        private void сообщенияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<FormMessages>();
+            form.ShowDialog();
+        }
     }
 }

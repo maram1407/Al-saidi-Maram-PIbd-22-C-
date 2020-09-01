@@ -9,7 +9,7 @@
 					<Paragraph>
 						<TextRuns>
 							<TextRun>
-								<Value>Список издлий с компонентами</Value>
+								<Value>Изделия и компоненты</Value>
 								<Style />
 							</TextRun>
 						</TextRuns>
@@ -17,10 +17,10 @@
 					</Paragraph>
 				</Paragraphs>
 				<rd:DefaultName>Textbox1</rd:DefaultName>
-				<Top>0.69003cm</Top>
-				<Left>5.64303cm</Left>
-				<Height>0.6cm</Height>
-				<Width>5.421cm</Width>
+				<Top>0.4572cm</Top>
+				<Left>4.50003cm</Left>
+				<Height>0.64233cm</Height>
+				<Width>4.44733cm</Width>
 				<Style>
 					<Border>
 						<Style>None</Style>
@@ -31,26 +31,26 @@
 					<PaddingBottom>2pt</PaddingBottom>
 				</Style>
 			</Textbox>
-			<Tablix Name="Tablix2">
+			<Tablix Name="Tablix1">
 				<TablixBody>
 					<TablixColumns>
 						<TablixColumn>
-							<Width>4.92711cm</Width>
+							<Width>4.93417cm</Width>
 						</TablixColumn>
 						<TablixColumn>
-							<Width>5.79494cm</Width>
+							<Width>4.93417cm</Width>
 						</TablixColumn>
 						<TablixColumn>
-							<Width>2.76811cm</Width>
+							<Width>4.93417cm</Width>
 						</TablixColumn>
 					</TablixColumns>
 					<TablixRows>
 						<TablixRow>
-							<Height>0.981cm</Height>
+							<Height>1.362cm</Height>
 							<TablixCells>
 								<TablixCell>
 									<CellContents>
-										<Textbox Name="Textbox10">
+										<Textbox Name="Textbox2">
 											<CanGrow>true</CanGrow>
 											<KeepTogether>true</KeepTogether>
 											<Paragraphs>
@@ -64,7 +64,7 @@
 													<Style />
 												</Paragraph>
 											</Paragraphs>
-											<rd:DefaultName>Textbox10</rd:DefaultName>
+											<rd:DefaultName>Textbox2</rd:DefaultName>
 											<Style>
 												<Border>
 													<Color>LightGrey</Color>
@@ -80,7 +80,7 @@
 								</TablixCell>
 								<TablixCell>
 									<CellContents>
-										<Textbox Name="Textbox12">
+										<Textbox Name="Textbox4">
 											<CanGrow>true</CanGrow>
 											<KeepTogether>true</KeepTogether>
 											<Paragraphs>
@@ -94,7 +94,7 @@
 													<Style />
 												</Paragraph>
 											</Paragraphs>
-											<rd:DefaultName>Textbox12</rd:DefaultName>
+											<rd:DefaultName>Textbox4</rd:DefaultName>
 											<Style>
 												<Border>
 													<Color>LightGrey</Color>
@@ -110,7 +110,7 @@
 								</TablixCell>
 								<TablixCell>
 									<CellContents>
-										<Textbox Name="Textbox14">
+										<Textbox Name="Textbox6">
 											<CanGrow>true</CanGrow>
 											<KeepTogether>true</KeepTogether>
 											<Paragraphs>
@@ -124,7 +124,7 @@
 													<Style />
 												</Paragraph>
 											</Paragraphs>
-											<rd:DefaultName>Textbox14</rd:DefaultName>
+											<rd:DefaultName>Textbox6</rd:DefaultName>
 											<Style>
 												<Border>
 													<Color>LightGrey</Color>
@@ -141,11 +141,11 @@
 							</TablixCells>
 						</TablixRow>
 						<TablixRow>
-							<Height>0.981cm</Height>
+							<Height>1.362cm</Height>
 							<TablixCells>
 								<TablixCell>
 									<CellContents>
-										<Textbox Name="ProductName1">
+										<Textbox Name="ProductName">
 											<CanGrow>true</CanGrow>
 											<KeepTogether>true</KeepTogether>
 											<Paragraphs>
@@ -159,7 +159,7 @@
 													<Style />
 												</Paragraph>
 											</Paragraphs>
-											<rd:DefaultName>ProductName1</rd:DefaultName>
+											<rd:DefaultName>ProductName</rd:DefaultName>
 											<Style>
 												<Border>
 													<Color>LightGrey</Color>
@@ -175,7 +175,7 @@
 								</TablixCell>
 								<TablixCell>
 									<CellContents>
-										<Textbox Name="ComponentName1">
+										<Textbox Name="ComponentName">
 											<CanGrow>true</CanGrow>
 											<KeepTogether>true</KeepTogether>
 											<Paragraphs>
@@ -189,7 +189,7 @@
 													<Style />
 												</Paragraph>
 											</Paragraphs>
-											<rd:DefaultName>ComponentName1</rd:DefaultName>
+											<rd:DefaultName>ComponentName</rd:DefaultName>
 											<Style>
 												<Border>
 													<Color>LightGrey</Color>
@@ -231,6 +231,7 @@
 												<PaddingBottom>2pt</PaddingBottom>
 											</Style>
 										</Textbox>
+										<rd:Selected>true</rd:Selected>
 									</CellContents>
 								</TablixCell>
 							</TablixCells>
@@ -255,10 +256,10 @@
 					</TablixMembers>
 				</TablixRowHierarchy>
 				<DataSetName>DataSetProductComponent</DataSetName>
-				<Top>2.3622cm</Top>
-				<Left>2.12937cm</Left>
-				<Height>1.962cm</Height>
-				<Width>13.49017cm</Width>
+				<Top>1.76953cm</Top>
+				<Left>0.98637cm</Left>
+				<Height>2.724cm</Height>
+				<Width>14.8025cm</Width>
 				<ZIndex>1</ZIndex>
 				<Style>
 					<Border>
@@ -283,18 +284,18 @@
 	</Page>
 	<AutoRefresh>0</AutoRefresh>
 	<DataSources>
-		<DataSource Name="AbstractFactoryBusinessLogicViewModels1">
+		<DataSource Name="AbstractFactoryBusinessLogicViewModels">
 			<ConnectionProperties>
 				<DataProvider>System.Data.DataSet</DataProvider>
 				<ConnectString>/* Local Connection */</ConnectString>
 			</ConnectionProperties>
-			<rd:DataSourceID>24d15676-8680-4025-adff-577cd6c0f8f4</rd:DataSourceID>
+			<rd:DataSourceID>60694bb7-d8ff-4ca2-8d95-1d8897c0c4a4</rd:DataSourceID>
 		</DataSource>
 	</DataSources>
 	<DataSets>
 		<DataSet Name="DataSetProductComponent">
 			<Query>
-				<DataSourceName>PlantBusinessLogicViewModels1</DataSourceName>
+				<DataSourceName>AbstractFactoryBusinessLogicViewModels</DataSourceName>
 				<CommandText>/* Local Query */</CommandText>
 			</Query>
 			<Fields>
@@ -314,10 +315,10 @@
 			<rd:DataSetInfo>
 				<rd:DataSetName>AbstractFactoryBusinessLogic.ViewModels</rd:DataSetName>
 				<rd:TableName>ReportProductComponentViewModel</rd:TableName>
-				<rd:ObjectDataSourceType>AbstractFactoryBusinessLogic.ViewModels.ReportProductComponentViewModel, AbstractFactoryBusinessLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+				<rd:ObjectDataSourceType>AbstractFactoryBusinessLogic.ViewModels.ReportProductComponentViewModel,AbstractFactoryBusinessLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
 			</rd:DataSetInfo>
 		</DataSet>
 	</DataSets>
 	<rd:ReportUnitType>Cm</rd:ReportUnitType>
-	<rd:ReportID>95df5ca9-2db2-46d3-b12d-513ef91db6de</rd:ReportID>
+	<rd:ReportID>4a79511d-d287-4b12-bb05-60a6f776312b</rd:ReportID>
 </Report>
