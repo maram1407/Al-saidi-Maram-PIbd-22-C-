@@ -39,6 +39,7 @@ namespace AbstractFactory
                 currentContainer.RegisterType<ReportLogic>(new
                HierarchicalLifetimeManager());
                 currentContainer.RegisterType<IClientLogic, ClientLogic>(new HierarchicalLifetimeManager());
+                currentContainer.RegisterType<IImplementerLogic, ImplementerLogic>(new HierarchicalLifetimeManager());
                 return currentContainer;
             }
         }

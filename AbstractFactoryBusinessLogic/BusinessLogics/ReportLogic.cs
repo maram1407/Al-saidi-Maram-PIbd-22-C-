@@ -51,17 +51,16 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public List<IGrouping<DateTime, OrderViewModel>> GetOrders(ReportBindingModel model)
+        public List<System.Linq.IGrouping<DateTime, OrderViewModel>> GetOrders(ReportBindingModel model)
         {
-            var list = orderLogic
-            .Read(new OrderBindingModel
+            var list = orderLogic.Read(new OrderBindingModel
             {
                 DateFrom = model.DateFrom,
                 DateTo = model.DateTo
             })
-            .GroupBy(rec => rec.DateCreate.Date)
-            .OrderBy(recG => recG.Key)
-            .ToList();
+           .GroupBy(rec => rec.DateCreate.Date)
+           .OrderBy(recG => recG.Key)
+           .ToList();
 
             return list;
         }
