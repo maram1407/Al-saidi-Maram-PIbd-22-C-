@@ -18,13 +18,15 @@ namespace AbstractFactoryFileImplement
         private readonly string ProductComponentFileName = "ProductComponent.xml";
         private readonly string ClientFileName = "Client.xml";
         private readonly string ImplementerFileName = "Implementer.xml";
+
         private readonly string MessageInfoFileName = "MessageInfo.xml";
-        public List<Component> Components { get; set; }
+        public List<Component> Components { get; set; zz}
         public List<Order> Orders { get; set; }
         public List<Product> Products { get; set; }
         public List<ProductComponent> ProductComponents { get; set; }
         public List<Client> Clients { get; set; }
         public List<Implementer> Implementers { get; set; }
+
         public List<MessageInfo> MessageInfoes { get; set; }
         private FileDataListSingleton()
         {
@@ -184,6 +186,7 @@ namespace AbstractFactoryFileImplement
 
             return list;
         }
+
         private List<MessageInfo> LoadMessageInfoes()
         {
             var list = new List<MessageInfo>();

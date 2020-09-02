@@ -16,6 +16,7 @@ namespace AbstractFactoryListImplement
         public List<ProductComponent> ProductComponents { get; set; }
         public List<Client> Clients { get; set; }
         public List<MessageInfo> MessageInfoes { get; set; }
+
         public List<Implementer> Implementers { get; set; }
         private DataListSingleton()
         {
@@ -25,6 +26,7 @@ namespace AbstractFactoryListImplement
             Clients = new List<Client>();
             ProductComponents = new List<ProductComponent>();
             Implementers = new List<Implementer>();
+
             MessageInfoes = new List<MessageInfo>();
         }
         public static DataListSingleton GetInstance()
