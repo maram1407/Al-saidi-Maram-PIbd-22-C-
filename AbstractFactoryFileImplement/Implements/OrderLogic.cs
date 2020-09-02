@@ -36,6 +36,7 @@ namespace AbstractFactoryFileImplement.Implements
                 source.Orders.Add(element);
             }
             element.ProductId = model.ProductId == 0 ? element.ProductId : model.ProductId;
+            element.ClientId = model.ClientId == null ? element.ClientId : (int)model.ClientId;
             element.Count = model.Count;
             element.Sum = model.Sum;
             element.Status = model.Status;
@@ -58,25 +59,21 @@ namespace AbstractFactoryFileImplement.Implements
         public List<OrderViewModel> Read(OrderBindingModel model)
         {
             return source.Orders
-            .Where(rec => model == null || rec.Id == model.Id)
-            .Select(rec => new OrderViewModel
-            {
-                Id = rec.Id,
-                ProductName = GetProductName(rec.ProductId),
-                Count = rec.Count,
-                Sum = rec.Sum,
-                Status = rec.Status,
-                DateCreate = rec.DateCreate,
-                DateImplement = rec.DateImplement
-            })
+           .Where(rec => model == null || rec.Id == model.Id || model.DateFrom.HasValue && model.DateTo.HasValue && rec.DateCreate >= model.DateFrom && rec.DateCreate <= model.DateTo
+           || model.ClientId.HasValue && rec.ClientId == model.ClientId)
+           .Select(rec => new OrderViewModel
+           {
+               Id = rec.Id,
+               ClientId = rec.ClientId,
+               ProductName = source.Products.FirstOrDefault(recP => recP.Id == rec.ProductId)?.ProductName,
+               ClientFIO = source.Clients.FirstOrDefault(recC => recC.Id == rec.ClientId)?.FIO,
+               Count = rec.Count,
+               Sum = rec.Sum,
+               Status = rec.Status,
+               DateCreate = rec.DateCreate,
+               DateImplement = rec.DateImplement
+           })
             .ToList();
-        }
-        private string GetProductName(int id)
-        {
-            string name = "";
-            var product = source.Products.FirstOrDefault(x => x.Id == id);
-            name = product != null ? product.ProductName : "";
-            return name;
         }
     }
 }
