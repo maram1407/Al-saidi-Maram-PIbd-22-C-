@@ -1,13 +1,13 @@
-﻿using AbstractFactoryBusinessLogic.BindingModel;
+﻿using System;
+using AbstractFactoryBusinessLogic.BindingModel;
 using AbstractFactoryBusinessLogic.Interfaces;
 using AbstractFactoryBusinessLogic.ViewModels;
-using AbstractFactoryDatabaseImplement.Models;
-using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using AbstractFactoryDatabaseImplement.Models;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AbstractFactoryBusinessLogic.Enums;
+
 
 namespace AbstractFactoryDatabaseImplement.Implements
 {
@@ -17,7 +17,7 @@ namespace AbstractFactoryDatabaseImplement.Implements
         {
             using (var context = new AbstractFactoryDatabase())
             {
-                Order element;
+                Order element = null;
                 if (model.Id.HasValue)
                 {
                     element = context.Orders.FirstOrDefault(rec => rec.Id == model.Id);
@@ -28,16 +28,19 @@ namespace AbstractFactoryDatabaseImplement.Implements
                 }
                 else
                 {
-                    element = new Order { };
+                    element = new Order();
                     context.Orders.Add(element);
                 }
-                element.ProductId = model.ProductId == 0 ? element.ProductId : model.ProductId;
                 element.Count = model.Count;
-                element.Sum = model.Sum;
-                element.Status = model.Status;
                 element.DateCreate = model.DateCreate;
                 element.DateImplement = model.DateImplement;
+                element.ClientId = model.ClientId.Value;
+                element.ImplementerId = model.ImplementerId;
+                element.ProductId = model.ProductId;
+                element.Status = model.Status;
+                element.Sum = model.Sum;
                 context.SaveChanges();
+
             }
         }
         public void Delete(OrderBindingModel model)
@@ -62,19 +65,32 @@ namespace AbstractFactoryDatabaseImplement.Implements
             using (var context = new AbstractFactoryDatabase())
             {
                 return context.Orders
-                .Include(rec => rec.Product)
-                .Where(rec => model == null || rec.Id == model.Id)
+                .Where(rec => model == null || (rec.Id == model.Id &&
+               model.Id.HasValue) ||
+                (model.DateFrom.HasValue && model.DateTo.HasValue && rec.DateCreate
+               >= model.DateFrom && rec.DateCreate <= model.DateTo) ||
+                (model.ClientId.HasValue && rec.ClientId == model.ClientId) ||
+               (model.FreeOrders.HasValue && model.FreeOrders.Value &&
+               !rec.ImplementerId.HasValue) ||
+                (model.ImplementerId.HasValue && rec.ImplementerId ==
+               model.ImplementerId && rec.Status == OrderStatus.Выполняется))
                 .Select(rec => new OrderViewModel
                 {
                     Id = rec.Id,
-                    ProductName = rec.Product.ProductName,
+                    ClientId = rec.ClientId,
+                    ImplementerId = rec.ImplementerId,
+                    ProductId = rec.ProductId,
+                    DateCreate = rec.DateCreate,
+                    DateImplement = rec.DateImplement,
+                    Status = rec.Status,
                     Count = rec.Count,
                     Sum = rec.Sum,
-                    Status = rec.Status,
-                    DateCreate = rec.DateCreate,
-                    DateImplement = rec.DateImplement
+                    ClientFIO = rec.Client.FIO,
+                    ImplementerFIO = rec.ImplementerId.HasValue ?
+               rec.Implementer.ImplementerFIO : string.Empty,
+                    ProductName = rec.Product.ProductName
                 })
-            .ToList();
+               .ToList();
             }
         }
     }

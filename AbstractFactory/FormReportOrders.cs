@@ -12,7 +12,7 @@ namespace AbstractFactory
 {
     public partial class FormReportOrders : Form
     {
-            [Dependency]
+        [Dependency]
         public new IUnityContainer Container { get; set; }
         private readonly ReportLogic logic;
         public FormReportOrders(ReportLogic logic)
