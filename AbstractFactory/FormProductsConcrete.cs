@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AbstractFactoryBusinessLogic.Interfaces;
 using AbstractFactoryBusinessLogic.BindingModel;
+using AbstractFactoryBusinessLogic.ViewModels;
 using System.Windows.Forms;
 using Unity;
 namespace AbstractFactory
@@ -30,15 +31,8 @@ namespace AbstractFactory
         {
             try
             {
-                var list = logic.Read(null);
-                if (list != null)
-                {
-                    dataGridView.DataSource = list;
-                    dataGridView.Columns[0].Visible = false;
-                    dataGridView.Columns[1].AutoSizeMode =
-DataGridViewAutoSizeColumnMode.Fill;
-                    dataGridView.Columns[3].Visible = false;
-                }
+                Program.ConfigGrid(logic.Read(null), dataGridView);
+
             }
             catch (Exception ex)
             {
