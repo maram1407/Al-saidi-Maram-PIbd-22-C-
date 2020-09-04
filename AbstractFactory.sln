@@ -1,9 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.106
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{4BAB71AD-88D0-4FCD-AC2E-8DA8ADEF8FAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryBusinessLogic", "AbstractFactoryBusinessLogic\AbstractFactoryBusinessLogic.csproj", "{A0E92B3A-C1C2-4EC1-B370-AA18B58A1AB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryListImplement", "AbstractFactoryListImplement\AbstractFactoryListImplement.csproj", "{E5E4FA79-5835-4CD3-AD1C-023EA92D30E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryFileImplement", "AbstractFactoryFileImplement\AbstractFactoryFileImplement.csproj", "{495C95D1-02BE-4FA0-9434-7BDC7C3983D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryDatabaseImplement", "AbstractFactoryDatabaseImplement\AbstractFactoryDatabaseImplement.csproj", "{0B1CC619-5292-4E04-854D-6DB36B7D4A76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryRestApi", "AbstractFactoryRestApi\AbstractFactoryRestApi.csproj", "{0E561E1F-4F6E-4766-868F-2456D232A550}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstrastFactoryClientView", "AbstrastFactoryClientView\AbstrastFactoryClientView.csproj", "{965904C0-0AE3-4541-A47F-3F3EBC2DEBF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,30 @@ Global
 		{4BAB71AD-88D0-4FCD-AC2E-8DA8ADEF8FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BAB71AD-88D0-4FCD-AC2E-8DA8ADEF8FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BAB71AD-88D0-4FCD-AC2E-8DA8ADEF8FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0E92B3A-C1C2-4EC1-B370-AA18B58A1AB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E92B3A-C1C2-4EC1-B370-AA18B58A1AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E92B3A-C1C2-4EC1-B370-AA18B58A1AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E92B3A-C1C2-4EC1-B370-AA18B58A1AB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5E4FA79-5835-4CD3-AD1C-023EA92D30E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5E4FA79-5835-4CD3-AD1C-023EA92D30E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5E4FA79-5835-4CD3-AD1C-023EA92D30E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5E4FA79-5835-4CD3-AD1C-023EA92D30E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{495C95D1-02BE-4FA0-9434-7BDC7C3983D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495C95D1-02BE-4FA0-9434-7BDC7C3983D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495C95D1-02BE-4FA0-9434-7BDC7C3983D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495C95D1-02BE-4FA0-9434-7BDC7C3983D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B1CC619-5292-4E04-854D-6DB36B7D4A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B1CC619-5292-4E04-854D-6DB36B7D4A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B1CC619-5292-4E04-854D-6DB36B7D4A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B1CC619-5292-4E04-854D-6DB36B7D4A76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E561E1F-4F6E-4766-868F-2456D232A550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E561E1F-4F6E-4766-868F-2456D232A550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E561E1F-4F6E-4766-868F-2456D232A550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E561E1F-4F6E-4766-868F-2456D232A550}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965904C0-0AE3-4541-A47F-3F3EBC2DEBF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965904C0-0AE3-4541-A47F-3F3EBC2DEBF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965904C0-0AE3-4541-A47F-3F3EBC2DEBF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965904C0-0AE3-4541-A47F-3F3EBC2DEBF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
