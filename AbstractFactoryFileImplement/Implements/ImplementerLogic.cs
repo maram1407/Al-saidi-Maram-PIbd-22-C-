@@ -9,7 +9,9 @@ using System.Linq;
 
 namespace AbstractFactoryFileImplement.Implements
 {
-   public class ImplementerLogic : IImplementerLogic
+
+  public  class ImplementerLogic : IImplementerLogic
+
     {
         private readonly FileDataListSingleton source;
 

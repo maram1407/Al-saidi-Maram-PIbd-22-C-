@@ -7,12 +7,9 @@ using System.Windows.Forms;
 
 namespace AbstrastFactoryClientView
 {
-  public static class Program
+   static class Program
     {
         public static ClientViewModel Client { get; set; }
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {

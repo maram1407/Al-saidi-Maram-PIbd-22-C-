@@ -21,8 +21,7 @@ namespace AbstrastFactoryClientView
             {
                 comboBoxProduct.DisplayMember = "ProductName";
                 comboBoxProduct.ValueMember = "Id";
-                comboBoxProduct.DataSource =
-               APIClient.GetRequest<List<ProductViewModel>>("api/main/getproductlist");
+                comboBoxProduct.DataSource = APIClient.GetRequest<List<ProductViewModel>>("api/main/getproductlist");
                 comboBoxProduct.SelectedItem = null;
             }
             catch (Exception ex)

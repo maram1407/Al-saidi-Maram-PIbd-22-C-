@@ -8,7 +8,8 @@ using AbstractFactoryListImplement.Models;
 
 namespace AbstractFactoryListImplement.Implements
 {
-  public  class ImplementerLogic : IImplementerLogic
+   public class ImplementerLogic : IImplementerLogic
+
     {
         private readonly DataListSingleton source;
 
